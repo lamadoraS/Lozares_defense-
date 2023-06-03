@@ -1,5 +1,6 @@
 <?php
 include 'database.php';
+header("Content-Type: application/json; charset=utf-8");
 
 class Department extends Database 
 {
@@ -15,13 +16,15 @@ class Department extends Database
             )"; 
         $this->conn->query($create);          
 }
-public function insert()
-{
-   $i= "INSERT INTO $this->tblName 
-      VALUES (1,'antonette','lozares')";
-      $this->conn->query($i);
-      var_dump($this->conn->error);
+ public function insert()
+ {
+  $firstname= $_GET['first_name'];
+  $lastname= $_GET['last_name'];
 
+  $insert="INSERT INTO $this->tblName 
+  VALUES ('$firstname',$lastname')";
+  $this->conn->query($insert);
 }
-    
-} 
+ 
+}
+ 
