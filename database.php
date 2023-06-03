@@ -17,4 +17,3 @@ class Database{
         $this->conn->query($use);
     }
 }
-$d= new Database;

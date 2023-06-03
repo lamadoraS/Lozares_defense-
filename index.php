@@ -25,6 +25,3 @@ public function insert()
 }
     
 } 
-$e= new Department();
-$e->table();
-$e->insert();
