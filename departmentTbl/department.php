@@ -16,8 +16,8 @@ class Department extends Database implements employee
             id int primary key auto_increment,
             department_name varchar(200) not null,
             department_head varchar(200) not null,
-            location text null,
-            phone_number int,
+            location text,
+            phone_number float,
             email varchar(50),
             description text
             )";
