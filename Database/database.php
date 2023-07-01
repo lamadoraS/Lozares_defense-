@@ -17,6 +17,7 @@ class Database extends Db
         $this->connection = new mysqli($this->servername,$this->username,$this->password,$this->db);
         $d = "USE $this->db";
         $this->connection->query($d);
+
     }
     public function getError()
     {
